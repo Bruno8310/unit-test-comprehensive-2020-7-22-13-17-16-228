@@ -20,7 +20,20 @@ public class GussNumberGameTest {
         Assertions.assertEquals("4A0B", actual);
     }
 
+    @Test
+    void should_return_1A3B_when_guess_is_1342_given_answer_is_1234() {
+        // give
+        String gussNumber = "1342";
+        GussNumberGame gussNumberGame = new GussNumberGame();
+        // when
+        String actual = gussNumberGame.checkAnswer(gussNumber);
+        // then
+        Assertions.assertEquals("1A3B",actual);
+
+    }
+
     
+
 
 
 }
