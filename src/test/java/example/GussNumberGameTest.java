@@ -32,7 +32,19 @@ public class GussNumberGameTest {
 
     }
 
-    
+    @Test
+    void should_return_0A4B_when_guess_is_4321_given_answer_is_1234() {
+        // give
+        String gussNumber = "4321";
+        GussNumberGame gussNumberGame = new GussNumberGame();
+        // when
+        String actual = gussNumberGame.checkAnswer(gussNumber);
+        // then
+        Assertions.assertEquals("0A4B",actual);
+
+    }
+
+
 
 
 
