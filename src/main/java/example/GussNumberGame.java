@@ -63,13 +63,23 @@ public class GussNumberGame {
         while (iterator.hasNext()) {
             answer += iterator.next();
         }
+        System.out.println(answer);
         return answer;
     }
 
     public String receiveUserInput() {
         Scanner scanner = new Scanner(System.in);
         String guessNumber = scanner.nextLine();
+        char[] guessNumerToArray = guessNumber.toCharArray();
+        Set<Character> set = new HashSet<>();
+        for (char element : guessNumerToArray) {
+            set.add(element);
+        }
 
-        if (guessNumber.length() < 4 || )
+        if (guessNumber.length() < 4 || set.size() == guessNumerToArray.length) {
+            return "Wrong Input, Input again";
+        } else {
+            return guessNumber;
+        }
     }
 }

@@ -85,7 +85,8 @@ public class GussNumberGameTest {
         // give
         GussNumberGame gussNumberGame = new GussNumberGame();
         gussNumberGame.setAnswer(gussNumberGame.randNumber());
-        String guessNumber = "";
+        // TODO: 接收用户输入
+        String guessNumber = gussNumberGame.receiveUserInput();
 
         // when
         String actual = gussNumberGame.checkAnswer(guessNumber);
