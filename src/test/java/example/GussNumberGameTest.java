@@ -10,8 +10,8 @@ public class GussNumberGameTest {
     void should_return_4A0B_when_guess_is_1234_given_answer_is_1234() {
 
         // given
-        String gussNumber = "1234";
         GussNumberGame gussNumberGame = new GussNumberGame();
+        String gussNumber = "1234";
 
         // when
         String actual = gussNumberGame.checkAnswer(gussNumber);
@@ -28,7 +28,7 @@ public class GussNumberGameTest {
         // when
         String actual = gussNumberGame.checkAnswer(gussNumber);
         // then
-        Assertions.assertEquals("1A3B",actual);
+        Assertions.assertEquals("1A3B", actual);
 
     }
 
@@ -40,7 +40,7 @@ public class GussNumberGameTest {
         // when
         String actual = gussNumberGame.checkAnswer(gussNumber);
         // then
-        Assertions.assertEquals("0A4B",actual);
+        Assertions.assertEquals("0A4B", actual);
 
     }
 
@@ -52,7 +52,7 @@ public class GussNumberGameTest {
         // when
         String actual = gussNumberGame.checkAnswer(gussNumber);
         // then
-        Assertions.assertEquals("2A2B",actual);
+        Assertions.assertEquals("2A2B", actual);
 
     }
 
@@ -64,12 +64,35 @@ public class GussNumberGameTest {
         // when
         String actual = gussNumberGame.checkAnswer(gussNumber);
         // then
-        Assertions.assertEquals("0A2B",actual);
+        Assertions.assertEquals("0A2B", actual);
 
     }
 
+    @Test
+    void should_return_0A0B_when_guess_is_5678_given_answer_is_1234() {
+        // give
+        String gussNumber = "5678";
+        GussNumberGame gussNumberGame = new GussNumberGame();
+        // when
+        String actual = gussNumberGame.checkAnswer(gussNumber);
+        // then
+        Assertions.assertEquals("0A0B", actual);
 
+    }
 
+    @Test
+    void should_return_rightAnswer_when_guess_use_six_chances_given_answer_is_randNumber() {
+        // give
+        GussNumberGame gussNumberGame = new GussNumberGame();
+        gussNumberGame.setAnswer(gussNumberGame.randNumber());
+        String guessNumber = "";
+
+        // when
+        String actual = gussNumberGame.checkAnswer(guessNumber);
+        // then
+        Assertions.assertEquals(gussNumberGame.getAnswer(), actual);
+
+    }
 
 
 }

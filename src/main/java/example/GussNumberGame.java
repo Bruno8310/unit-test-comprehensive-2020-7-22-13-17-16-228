@@ -1,11 +1,26 @@
 package example;
 
 
+import java.util.*;
+
 public class GussNumberGame {
+
     private String answer;
 
     public GussNumberGame() {
         this.answer = "1234";
+    }
+
+    public GussNumberGame(String answer) {
+        this.answer = answer;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 
     public String checkAnswer(String guessNumber) {
@@ -16,7 +31,6 @@ public class GussNumberGame {
             char[] answerArr = this.answer.toCharArray();
             int countSameNumber = 0;
             int countSamePositionNumber = 0;
-
             for (int i = 0; i < guessNumberArr.length; i++) {
                 char guessNumberArrELement = guessNumberArr[i];
                 for (int j = 0; j < answerArr.length; j++) {
@@ -36,5 +50,26 @@ public class GussNumberGame {
             return String.format("%sA%sB", String.valueOf(countSamePositionNumber), String.valueOf(countSameNumber));
         }
 
+    }
+
+    public String randNumber() {
+        Set<Integer> set = new HashSet<>();
+        Random random = new Random();
+        while (set.size() < 4) {
+            set.add(random.nextInt(10));
+        }
+        Iterator<Integer> iterator = set.iterator();
+        String answer = "";
+        while (iterator.hasNext()) {
+            answer += iterator.next();
+        }
+        return answer;
+    }
+
+    public String receiveUserInput() {
+        Scanner scanner = new Scanner(System.in);
+        String guessNumber = scanner.nextLine();
+
+        if (guessNumber.length() < 4 || )
     }
 }
