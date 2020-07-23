@@ -44,6 +44,18 @@ public class GussNumberGameTest {
 
     }
 
+    @Test
+    void should_return_2A2B_when_guess_is_1243_given_answer_is_1234() {
+        // give
+        String gussNumber = "1243";
+        GussNumberGame gussNumberGame = new GussNumberGame();
+        // when
+        String actual = gussNumberGame.checkAnswer(gussNumber);
+        // then
+        Assertions.assertEquals("2A2B",actual);
+
+    }
+
 
 
 
