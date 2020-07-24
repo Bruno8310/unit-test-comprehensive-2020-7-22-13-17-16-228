@@ -10,7 +10,9 @@ public class Main {
         UserInputContent userInputContent = new UserInputContent();
 
         for (int i = 0; i < 6; i++) {
-
+            String isValidGuessNumber = userInputContent.receiveUserInput();
+            String validGuessNumber = userInputContent.isValid(isValidGuessNumber);
+            String result = gussNumberGame.checkAnswer(validGuessNumber);
 
         }
     }

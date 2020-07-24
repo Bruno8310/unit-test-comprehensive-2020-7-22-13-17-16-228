@@ -6,8 +6,9 @@ import java.util.Set;
 
 public class UserInputContent {
 
+    Scanner scanner = new Scanner(System.in);
+
     public String receiveUserInput() {
-        Scanner scanner = new Scanner(System.in);
         String guessNumber = scanner.nextLine();
         return guessNumber;
     }
