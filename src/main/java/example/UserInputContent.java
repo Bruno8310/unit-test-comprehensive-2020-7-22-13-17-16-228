@@ -6,9 +6,14 @@ import java.util.Set;
 
 public class UserInputContent {
 
-    Scanner scanner = new Scanner(System.in);
+    Scanner scanner;
+
+    public UserInputContent() {
+        scanner = new Scanner(System.in);
+    }
 
     public String receiveUserInput() {
+
         String guessNumber = scanner.nextLine();
         return guessNumber;
     }
@@ -19,7 +24,7 @@ public class UserInputContent {
         for (char element : guessNumerToArray) {
             set.add(element);
         }
-        if (guessNumber.length() < 4 || set.size() == guessNumerToArray.length) {
+        if (guessNumber.length() < 4 || set.size() != guessNumerToArray.length) {
             return "Wrong Input, Input again";
         }
         return guessNumber;

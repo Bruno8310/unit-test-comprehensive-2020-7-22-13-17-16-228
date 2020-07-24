@@ -22,7 +22,7 @@ public class GussNumberGame {
 
         int countSameNumber = 0;
         int countSamePositionNumber = 0;
-        // TODO
+
         for (int i = 0; i < guessNumberArr.length; i++) {
             char guessNumberArrELement = guessNumberArr[i];
             for (int j = 0; j < answerArr.length; j++) {
@@ -35,7 +35,6 @@ public class GussNumberGame {
             }
         }
 
-        // TODO
         for (int m = 0, n = 0; m < guessNumberArr.length && n < answerArr.length; m++, n++) {
             if (guessNumberArr[m] == answerArr[n]) {
                 countSamePositionNumber++;

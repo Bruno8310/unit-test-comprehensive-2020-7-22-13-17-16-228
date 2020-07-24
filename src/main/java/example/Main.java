@@ -10,10 +10,13 @@ public class Main {
         UserInputContent userInputContent = new UserInputContent();
 
         for (int i = 0; i < 6; i++) {
-            String isValidGuessNumber = userInputContent.receiveUserInput();
-            String validGuessNumber = userInputContent.isValid(isValidGuessNumber);
-            String result = gussNumberGame.checkAnswer(validGuessNumber);
-
+            String guessNumber = userInputContent.isValid(userInputContent.receiveUserInput());
+            if (guessNumber.equals("Wrong Input, Input again")) {
+                System.out.println(guessNumber);
+                continue;
+            }
+            String result = gussNumberGame.checkAnswer(guessNumber);
+            System.out.println(result);
         }
     }
 }
