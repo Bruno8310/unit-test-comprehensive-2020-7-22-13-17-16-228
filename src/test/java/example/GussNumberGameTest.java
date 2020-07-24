@@ -80,20 +80,20 @@ public class GussNumberGameTest {
 
     }
 
-    @Test
-    void should_return_rightAnswer_when_guess_use_six_chances_given_answer_is_randNumber() {
-        // give
-        GussNumberGame gussNumberGame = new GussNumberGame();
-        gussNumberGame.setAnswer(gussNumberGame.randNumber());
-        // TODO: 接收用户输入
-        String guessNumber = gussNumberGame.receiveUserInput();
-
-        // when
-        String actual = gussNumberGame.checkAnswer(guessNumber);
-        // then
-        Assertions.assertEquals(gussNumberGame.getAnswer(), actual);
-
-    }
+//    @Test
+//    void should_return_rightAnswer_when_guess_use_six_chances_given_answer_is_randNumber() {
+//        // give
+//        GussNumberGame gussNumberGame = new GussNumberGame();
+//        gussNumberGame.setAnswer(gussNumberGame.randNumber());
+//        // TODO: 接收用户输入
+//        String guessNumber = gussNumberGame.receiveUserInput();
+//
+//        // when
+//        String actual = gussNumberGame.checkAnswer(guessNumber);
+//        // then
+//        Assertions.assertEquals(gussNumberGame.getAnswer(), actual);
+//
+//    }
 
 
 }
